@@ -1,0 +1,16 @@
+[Unit]
+Description=accoustic_sensor_mvp
+After=network.target
+
+[Service]
+Type=simple
+ExecStart= /bin/bash /root/accoustic_sensor_mvp/software/server/start_prod.sh
+ExecReload=/bin/kill -HUP $MAINPID
+WorkingDirectory=/root/accoustic_sensor_mvp/software/server
+User=root
+Restart=always
+RestartSec=5s
+
+[Install]
+Alias=accoustic_sensor_mvp.service
+WantedBy=multi-user.target

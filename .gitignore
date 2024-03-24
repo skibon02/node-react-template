@@ -1,0 +1,6 @@
+*.key
+*.cert
+node_modules
+uploads
+measurments.json
+config.json
