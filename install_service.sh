@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cp accoustic_sensor_mvp.service /lib/systemd/system/accoustic_sensor_mvp.service
+cp my_service.service /lib/systemd/system/
 systemctl daemon-reload
-systemctl enable accoustic_sensor_mvp.service
+systemctl enable my_service.service
 

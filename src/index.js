@@ -35,7 +35,6 @@ else {
 }
 
 const httpsServer = https.createServer(credentials, app);
-start_websocket(httpsServer);
 
 
 app.get('/api/hello', (req, res) => {

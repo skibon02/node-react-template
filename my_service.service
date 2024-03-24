@@ -1,0 +1,16 @@
+[Unit]
+Description=my_service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart= /bin/bash /root/server/start_prod.sh
+ExecReload=/bin/kill -HUP $MAINPID
+WorkingDirectory=/root/server
+User=root
+Restart=always
+RestartSec=5s
+
+[Install]
+Alias=my_service.service
+WantedBy=multi-user.target
